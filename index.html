@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tic Tac Toe - Emoji Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🧠 Tic Tac Toe 🎮</h1>
+
+<!-- PLAYER SETTINGS -->
+<div class="settings">
+
+<div class="row">
+<input id="p1name" placeholder="Player 1 Name">
+<select id="p1emoji">
+<option>🦁</option>
+<option>😎</option>
+<option>👦</option>
+<option>🔥</option>
+<option>🐱</option>
+</select>
+</div>
+
+<div class="row">
+<input id="p2name" placeholder="Player 2 / Computer Name">
+<select id="p2emoji">
+<option>🐯</option>
+<option>🤖</option>
+<option>👧</option>
+<option>⚡</option>
+<option>👻</option>
+</select>
+</div>
+
+</div>
+
+<!-- MODE SELECTOR -->
+<div id="mode">
+<select id="gameMode" onchange="setMode()">
+<option value="pvc">🧠 Human vs Computer</option>
+<option value="pvp">👥 Human vs Human</option>
+</select>
+</div>
+
+<!-- SCOREBOARD -->
+<div id="scoreboard">
+🦁 0 : 0 🐯
+</div>
+
+<!-- GAME BOARD -->
+<div class="board" id="board">
+
+<div class="block" onclick="play(0)"></div>
+<div class="block" onclick="play(1)"></div>
+<div class="block" onclick="play(2)"></div>
+
+<div class="block" onclick="play(3)"></div>
+<div class="block" onclick="play(4)"></div>
+<div class="block" onclick="play(5)"></div>
+
+<div class="block" onclick="play(6)"></div>
+<div class="block" onclick="play(7)"></div>
+<div class="block" onclick="play(8)"></div>
+
+</div>
+
+<!-- MESSAGE -->
+<div id="msg">🦁 Your Turn</div>
+
+<!-- BUTTON -->
+<button onclick="resetGame()">New Game</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

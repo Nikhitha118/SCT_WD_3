@@ -1,0 +1,124 @@
+body {
+margin: 0;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+font-family: Arial;
+background: linear-gradient(120deg,#0f172a,#1e293b,#334155);
+background-size: 300% 300%;
+animation: bg 8s infinite alternate;
+}
+
+@keyframes bg {
+0% { background-position: left; }
+100% { background-position: right; }
+}
+
+.container {
+background: rgba(255,255,255,0.08);
+padding: 25px;
+border-radius: 20px;
+box-shadow: 0 0 25px black;
+backdrop-filter: blur(10px);
+text-align: center;
+}
+
+/* TITLE */
+h1 {
+color: white;
+margin-bottom: 10px;
+}
+
+/* SETTINGS (NEW UI SUPPORT) */
+.settings {
+margin: 10px 0;
+}
+
+.row {
+display: flex;
+gap: 8px;
+justify-content: center;
+margin: 5px 0;
+}
+
+input, select {
+padding: 8px;
+border-radius: 8px;
+border: none;
+outline: none;
+font-size: 14px;
+}
+
+/* MODE SELECTOR */
+#mode {
+margin: 10px 0;
+}
+
+#mode select {
+padding: 8px 15px;
+border-radius: 10px;
+border: none;
+font-weight: bold;
+cursor: pointer;
+background: #ffffff;
+}
+
+/* SCOREBOARD */
+#scoreboard {
+color: white;
+font-size: 22px;
+margin-bottom: 15px;
+font-weight: bold;
+}
+
+/* BOARD */
+.board {
+width: 330px;
+height: 330px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 6px;
+margin: auto;
+position: relative;
+}
+
+/* CELLS */
+.block {
+height: 100px;
+background: linear-gradient(145deg,#38bdf8,#0f766e);
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 45px;
+cursor: pointer;
+border-radius: 15px;
+transition: 0.2s;
+}
+
+.block:hover {
+transform: scale(1.05);
+}
+
+/* MESSAGE */
+#msg {
+color: white;
+margin: 15px;
+font-size: 20px;
+}
+
+/* BUTTON */
+button {
+padding: 10px 25px;
+border: none;
+border-radius: 25px;
+background: #22c55e;
+cursor: pointer;
+font-size: 16px;
+transition: 0.2s;
+}
+
+button:hover {
+transform: scale(1.05);
+}
